@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'org.sonarqube' version '3.1.1'
+
+}
+
+group 'sabana.poob'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.15'
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation(platform('org.junit:junit-bom:5.7.1'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+sonarqube{
+
+    properties{
+
+        property 'sonar.host.url' , 'http://localhost:9000'
+        property 'sonar.projectName' , 'Juan Valderrama - SABANA RESEARH'
+        property 'sonar.projectKey' , 'JUANVASE.SABANARESEARCH'
+        property 'sonar.sourceEncoding' , 'UTF-8'
+        property 'sonar.login' , '57e4c00f90fb6a3b3ecf393c28d7186154177d03'
+    }
+}
+
+jacocoTestReport{
+    reports{
+        xml.enabled true
+    }
+}
+
+test.finalizedBy jacocoTestReport
