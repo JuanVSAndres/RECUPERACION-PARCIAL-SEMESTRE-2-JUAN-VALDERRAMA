@@ -1,5 +1,4 @@
- # Repoción Parcial Corte 2
+ # Recuperacion Parcial segundo corte
 
- ## Diego Alejandro Prado Prieto
-
+ ## Juan Andrés Valderrama Serrato
  
