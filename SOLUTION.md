@@ -71,4 +71,5 @@ Una sobre-escritura de metodos es cuando otra clase reescribe un metodo existent
 
  # EVIDENCIA SONARQUBE
 
- ![](img/sonarqubeEvidencia.png)
+ ![sonarqubeEvidencia](https://user-images.githubusercontent.com/78180409/115980779-e56e9e80-a554-11eb-8d91-d614ac97d750.PNG)
+
